@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Sorpresa de Reyes para María</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(180deg, #a8e6cf, #56ab2f); /* verde */
+        color: #fff;
+        text-align: center;
+        overflow-x: hidden;
+    }
+    .container {
+        padding: 40px 20px;
+    }
+    h1 { font-size: 2.5em; margin-bottom: 10px; }
+    h2 { font-size: 1.8em; margin-top: 30px; }
+    p { font-size: 1.2em; }
+    img {
+        max-width: 90%;
+        border-radius: 20px;
+        margin: 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .confetti {
+        position: fixed;
+        width: 10px;
+        height: 10px;
+        animation: fall 5s linear infinite;
+        top: -10px;
+    }
+    @keyframes fall {
+        to { transform: translateY(110vh) rotate(360deg); }
+    }
+    .video-container { margin-top: 20px; }
+    button {
+        background-color: #4CAF50;
+        border: none;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎶 María, esto es para ti… 🎶</h1>
+    <p>Sé que Arde Bogotá es tu debilidad 💖</p>
+
+    <h2>2 entradas para verlos en concierto en Tenerife 🎤</h2>
+    <p>Y podrás invitar a la persona que quieras…  
+       ¡espero que me elijas a mí como tu “amigo”! 😉💛</p>
+
+    <p>Y no te preocupes por el hambre:  
+       <strong>guachinches incluidos durante todo el viaje</strong> 🍷🌮<br>
+       Vamos a comer, reír y pasarlo tan bien que no querremos volver 😄</p>
+
+    <p>Prepárate para música, risas, aventuras y este año <strong>vas a devorar</strong> ❤️</p>
+
+    <!-- Imágenes fiables subidas a Imgur -->
+    <img src="https://i.imgur.com/zmWfHzT.jpg" alt="Arde Bogotá concierto">
+    <img src="https://i.imgur.com/Zwqz83K.jpg" alt="Tenerife paisaje">
+    <img src="https://i.imgur.com/2MdTJ9U.jpg" alt="Guachinche comida">
+    <img src="https://i.imgur.com/7p1r8A0.jpg" alt="Diversión concierto">
+
+    <div class="video-container">
+        <iframe width="90%" height="315" 
+            src="https://www.youtube.com/embed/BH8_RVIohJc"
+            title="Arde Bogotá - Los Perros"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+        <p>Pulsa play para escuchar <strong>Los Perros</strong> de Arde Bogotá 🎶</p>
+    </div>
+</div>
+
+<script>
+for (let i = 0; i < 50; i++) {
+    let confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.animationDuration = (Math.random() * 3 + 3) + 's';
+    confetti.style.backgroundColor = ['#ffd700', '#ffffff', '#00ff00'][Math.floor(Math.random()*3)];
+    document.body.appendChild(confetti);
+}
+</script>
+
+</body>
+</html>
